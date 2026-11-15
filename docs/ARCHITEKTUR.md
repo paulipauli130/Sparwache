@@ -39,7 +39,7 @@ Die genauen Felder und Beziehungen werden vor dem Datenbankschema in einer separ
 
 ## Schnittstellenprinzip
 
-Die erste lokale API stellt Produktlinks unter `/api/products` bereit. `PATCH /api/products/:id` speichert oder entfernt einen Wunschpreis. Preis-Snapshots werden pro Produkt unter `/api/products/:id/prices` gelesen und angelegt. Preis- und Zielbeträge werden als ganze Cent-Beträge gespeichert, damit Rundungsfehler vermieden werden. Das UI markiert den Preisalarm, wenn der zuletzt erfasste Gesamtpreis (Artikel plus Versand) das Ziel erreicht. `POST /api/pricing/refresh` aktualisiert stündlich fällige Produkte für einen externen Scheduler; der Endpunkt ist per Bearer-Secret geschützt und verarbeitet je Aufruf höchstens zehn Produkte nacheinander. Ein GitHub-Actions-Workflow dient als kostenloser Zeitgeber und benötigt eine öffentlich erreichbare Installation sowie Repository-Secrets.
+Die erste lokale API stellt Produktlinks unter `/api/products` bereit. `PATCH /api/products/:id` speichert oder entfernt einen Wunschpreis. Preis-Snapshots werden pro Produkt unter `/api/products/:id/prices` gelesen und angelegt. Preis- und Zielbeträge werden als ganze Cent-Beträge gespeichert, damit Rundungsfehler vermieden werden. Das UI markiert den Preisalarm, wenn der zuletzt erfasste Gesamtpreis (Artikel plus Versand) das Ziel erreicht. `POST /api/pricing/refresh` aktualisiert stündlich fällige Produkte für einen externen Scheduler; der Endpunkt ist per Bearer-Secret geschützt und verarbeitet je Aufruf höchstens zehn Produkte nacheinander. Der spätere Zeitgeber soll über den gewählten Hosting-Anbieter laufen und benötigt eine öffentlich erreichbare Installation.
 
 Quellen werden über eine einheitliche Adapter-Schnittstelle angebunden:
 

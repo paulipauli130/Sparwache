@@ -24,7 +24,8 @@
 - [x] Erfassten Preisverlauf pro Produkt grafisch darstellen
 - [x] Wunschpreis je Produkt speichern und bei manuell erfasstem Preisziel visuell markieren
 - [x] eBay-Browse-API Adapter, Angebotsdatenbank, Abrufstatus und Aktualisierung beim Hinzufügen/Öffnen ergänzen
-- [x] Geschützten Abruf-Endpunkt und stündlichen GitHub-Actions-Scheduler für gehostete Installationen ergänzen
+- [x] Geschützten Abruf-Endpunkt für gehostete Scheduler ergänzen
+- [ ] Zeitplan des gewählten Hosting-Anbieters einrichten und prüfen
 - [ ] eBay-Produktionszugang beantragen und echte Abrufe mit Zugangsdaten prüfen
 - [ ] Scheduler mit gehosteter Instanz und echten Zugangsdaten end-to-end prüfen
 - [ ] Variantenmodell ergänzen
